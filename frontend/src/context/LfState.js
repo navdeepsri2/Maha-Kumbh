@@ -95,7 +95,7 @@ const getComments = async () => {
     } catch (error) {
       console.error("Error fetching items:", error);
     }
-  }, []);
+  }, [API_URL]);
   const getItemsByType = useCallback(async (type) => {
     try {
         const url = `${API_URL}/lf/type/${type}`;
@@ -121,7 +121,7 @@ const getComments = async () => {
     } catch (error) {
         console.error("Error fetching items:", error);
     }
-}, [setItems]);
+}, [setItems, API_URL]);
   const getItemsByLocation = useCallback(async (location) => {
     try {
         const url = `${API_URL}/lf/location/${location}`;
@@ -147,7 +147,7 @@ const getComments = async () => {
     } catch (error) {
         console.error("Error fetching items:", error);
     }
-}, [setItems]);
+}, [setItems, API_URL]);
 const getItemsBySearch = async (filters) => {
   try {
     // Convert filters into query parameters

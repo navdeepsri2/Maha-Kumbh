@@ -42,7 +42,7 @@ export default function ResetPassword() {
   return (
     <div>
       <Helmet>
-                <title>Prayatak - Reset Password </title>
+                <title>Maha Kumbh - Reset Password </title>
             </Helmet>
       <section className="login-center">
         <div className="login-container">

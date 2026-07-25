@@ -6,7 +6,7 @@ const Guide = () => {
     return (
         <div className="prayagraj-container">
             <Helmet>
-                <title>Prayatak - Attractions </title>
+                <title>Maha Kumbh - Attractions </title>
             </Helmet>
             <div className="prayagraj-content">
                 <h1 className="prayagraj-title">Explore the Sacred Splendor of Prayagraj</h1>

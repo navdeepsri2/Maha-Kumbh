@@ -89,7 +89,7 @@ export default function Blog() {
   return (
     <div className='rootClass'>
       <Helmet>
-        <title>Prayatak - Blogs</title>
+        <title>Maha Kumbh - Blogs</title>
       </Helmet>
       <div className="blog-container">
         <div className="blog-content">

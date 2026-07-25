@@ -178,7 +178,7 @@ export default function Showcaselostandfound() {
   return (
     <>
     <Helmet>
-                <title>Prayatak - Lost and Found </title>
+                <title>Maha Kumbh - Lost and Found </title>
             </Helmet>
       <div className="home" style={{
         backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%), url(${backgrounds[bgIndex]})`,

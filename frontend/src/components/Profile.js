@@ -115,7 +115,7 @@ function Profile() {
     return (
         <div className='profile-body'>
             <Helmet>
-                <title>Prayatak - Profile </title>
+                <title>Maha Kumbh - Profile </title>
             </Helmet>
             <div className="profile-container">
                 <div className="profile-card">

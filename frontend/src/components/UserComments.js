@@ -93,7 +93,7 @@ function UserComments() {
   return (
     <div className="comments-body">
       <Helmet>
-                <title>Prayatak - Comments</title>
+                <title>Maha Kumbh - Comments</title>
             </Helmet>
       <div className="comments-page">
         <h1 className="page-title">Your Comment History</h1>

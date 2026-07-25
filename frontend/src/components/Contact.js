@@ -108,7 +108,7 @@ const ContactForm = () => {
   return (
     <div className="contact-main">
       <Helmet>
-                <title>Prayatak - Contact Us </title>
+                <title>Maha Kumbh - Contact Us </title>
             </Helmet>
       <section className="contact-contact-form">
         <div className="contact-container">

@@ -1,26 +1,30 @@
-import { useState } from "react";
+import { useUser, useClerk } from '@clerk/clerk-react';
 import UserContext from "./UserContext";
 
 export const UserState = ({ children }) => {
-  const [user, setUser] = useState(() => {
-    // Retrieve the user from localStorage and parse it once
-    return JSON.parse(localStorage.getItem('user') || 'null');
-  });
+  const { user: clerkUser, isLoaded, isSignedIn } = useUser();
+  const { signOut } = useClerk();
 
-  // Function to update user and persist it in localStorage
+  let user = null;
+  if (isSignedIn && clerkUser) {
+    user = {
+      _id: clerkUser.id,
+      name: clerkUser.fullName || clerkUser.firstName || clerkUser.username || "User",
+      email: clerkUser.primaryEmailAddress?.emailAddress,
+      isAdmin: clerkUser.publicMetadata?.isAdmin || false,
+    };
+  }
+
   const loginUser = (userData) => {
-    setUser(userData);
-    localStorage.setItem('user', JSON.stringify(userData));
+    // Handled automatically by Clerk
   };
 
-  // Function to log out user and clear localStorage
   const logoutUser = () => {
-    setUser(null);
-    localStorage.removeItem('user');
+    signOut();
   };
 
   return (
-    <UserContext.Provider value={{ user, setUser, loginUser, logoutUser }}>
+    <UserContext.Provider value={{ user, setUser: () => {}, loginUser, logoutUser, isLoaded }}>
       {children}
     </UserContext.Provider>
   );

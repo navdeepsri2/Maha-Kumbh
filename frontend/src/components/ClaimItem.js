@@ -89,7 +89,7 @@ function ClaimItem() {
     return (
         <section className="claim-section">
             <Helmet>
-                <title>Prayatak - Claim Item </title>
+                <title>Maha Kumbh - Claim Item </title>
             </Helmet>
             <div className="claim-container">
                 <div className="claim-main-content">

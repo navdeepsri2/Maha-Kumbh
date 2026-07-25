@@ -7,7 +7,7 @@ const Prayagraj = () => {
     return (
         <div className="prayagraj-container">
             <Helmet>
-                <title>Prayatak - History </title>
+                <title>Maha Kumbh - History </title>
             </Helmet>
             <div className="prayagraj-content">
                 <h1 className="prayagraj-title">About Prayagraj</h1>

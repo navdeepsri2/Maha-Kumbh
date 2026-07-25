@@ -105,7 +105,7 @@ export default function EditProfile() {
   return (
     <div>
       <Helmet>
-                <title>Prayatak - Edit Profile </title>
+                <title>Maha Kumbh - Edit Profile </title>
             </Helmet>
       <section className="login-center">
         <div className="login-container">

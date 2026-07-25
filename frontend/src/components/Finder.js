@@ -63,7 +63,7 @@ export default function Finder() {
   return (
     <div>
       <Helmet>
-                <title>Prayatak - Items </title>
+                <title>Maha Kumbh - Items </title>
             </Helmet>
       <div className="finder-container">
         <div className="finder-main-content">

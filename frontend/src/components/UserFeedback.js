@@ -69,7 +69,7 @@ function UserFeedback() {
 
     return (
         <><Helmet>
-        <title>Prayatak - Feedback</title>
+        <title>Maha Kumbh - Feedback</title>
     </Helmet>
         <div className="admin-body">
             <div className="admin-sidebar">

@@ -5,20 +5,46 @@ const cloudinary = require('cloudinary').v2;
 const { CloudinaryStorage } = require('multer-storage-cloudinary');
 require('dotenv').config();
 
-// Middleware to check if the user is logged in
-function validate(req, res, next) {
-    if (!req.session || !req.session.isLogin) {
-        return res.status(401).json({ message: 'Unauthorized' });
-    }
-    next();
-}
+const { ClerkExpressRequireAuth } = require('@clerk/clerk-sdk-node');
+const User = require('./models/user');
 
-function validateAdmin(req, res, next) {
-    if (!req.session || !req.session.isAdmin) {
-        return res.status(401).json({ message: 'not admin' });
+const syncUser = async (req, res, next) => {
+    if (!req.auth || !req.auth.userId) return next();
+    try {
+        let user = await User.findOne({ _id: req.auth.userId });
+        if (!user) {
+            const clerkUser = await require('@clerk/clerk-sdk-node').users.getUser(req.auth.userId);
+            user = new User({
+                _id: req.auth.userId,
+                name: clerkUser.firstName || clerkUser.username || "User",
+                email: clerkUser.emailAddresses[0]?.emailAddress || "",
+                address: "N/A"
+            });
+            await user.save();
+        }
+    } catch(e) {
+        console.error("Error syncing user:", e);
     }
     next();
-}
+};
+
+const validate = [ClerkExpressRequireAuth(), syncUser];
+
+const validateAdmin = [
+    ClerkExpressRequireAuth(),
+    syncUser,
+    async (req, res, next) => {
+        try {
+            const user = await User.findOne({ _id: req.auth.userId });
+            if (user && user.isAdmin) {
+                return next();
+            }
+            return res.status(401).json({ message: 'not admin' });
+        } catch(e) {
+            return res.status(401).json({ message: 'not admin' });
+        }
+    }
+];
 
 // Set up email transporter for nodemailer
 const transporter = nodemailer.createTransport({

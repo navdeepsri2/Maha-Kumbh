@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import BlogContext from "./BlogContext";
 import { showSuccess, showError } from '../utils/toast';
 
@@ -115,9 +115,7 @@ const BlogState = (props) => {
                 throw new Error(errorMessage.error || 'Failed to update blog.');
             }
     
-            const result = await response.json();
-
-    
+            await response.json();
         } catch (error) {
             console.error("Error updating blog:", error);
             showError(`An error occurred: ${error.message}`);

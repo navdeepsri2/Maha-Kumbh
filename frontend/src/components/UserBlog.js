@@ -243,7 +243,7 @@ function UserBlog() {
     return (
         <div className='userblog-body'>
             <Helmet>
-                <title>Prayatak - User Blogs</title>
+                <title>Maha Kumbh - User Blogs</title>
             </Helmet>
             <div className="user-blog-header">
                 <button className="btn-primary lost-btn" onClick={openForm}>

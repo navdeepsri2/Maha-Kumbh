@@ -6,7 +6,7 @@ const AboutUs = () => {
     return (
         <div className="about-us-body">
             <Helmet>
-                <title>Prayatak - About Us</title>
+                <title>Maha Kumbh - About Us</title>
             </Helmet>
             <div className='about-us-main'>
                 <section className="about-us-about-us">
@@ -14,7 +14,7 @@ const AboutUs = () => {
                         <h2>How It Started</h2>
                         <h1>Explore, Experience, and Reconnect</h1>
                         <p>
-                            Welcome to Prayatak, your ultimate companion for an extraordinary Kumbh Mela experience. At Prayatak, we understand the spiritual, cultural, and logistical marvel that is the Kumbh Mela—a festival where millions come together in search of spiritual awakening, cultural connections, and unforgettable memories. Discover captivating stories and essential travel tips while staying connected and safe, knowing we’re here to help reunite people and belongings amid the festival’s vibrant chaos. Join us to make your Kumbh Mela experience unforgettable and stress-free.
+                            Welcome to Maha Kumbh, your ultimate companion for an extraordinary Kumbh Mela experience. At Maha Kumbh, we understand the spiritual, cultural, and logistical marvel that is the Kumbh Mela—a festival where millions come together in search of spiritual awakening, cultural connections, and unforgettable memories. Discover captivating stories and essential travel tips while staying connected and safe, knowing we’re here to help reunite people and belongings amid the festival’s vibrant chaos. Join us to make your Kumbh Mela experience unforgettable and stress-free.
                         </p>
                     </div>
                     <div className="about-us-image">

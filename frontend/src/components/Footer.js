@@ -19,21 +19,21 @@ export default function Footer() {
             <p className="text-white" style={{ marginBottom: '10px' }}>
               For any enquiry: <a href="mailto:your.email@gmail.com" style={{ color: 'inherit', textDecoration: 'underline' }}>your.email@gmail.com</a>
             </p>
-            <p className="text-grey">Copyright 2024 Prayatak Inc.</p>
+            <p className="text-grey">Copyright 2024 Maha Kumbh Inc.</p>
           </div>
         </div>
         <div className="right-bot">
           <div className="left-list">
             <h3 className="text-yellow">More on the Blog</h3>
             <ul>
-              <li><Link to="/about">About Prayatak</Link></li>
+              <li><Link to="/about">About Maha Kumbh</Link></li>
               <li><Link to="/Faq">Faqs</Link></li>
               <li><Link to="/blogs/1">Write your experiences</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
             </ul>
           </div>
           <div className="right-list">
-            <h3 className="text-yellow">More on Prayatak</h3>
+            <h3 className="text-yellow">More on Maha Kumbh</h3>
             <ul>
               <li><Link to="/lost-found">Lost and Found</Link></li>
               <li><Link to="/prayag">About Praygraj</Link></li>

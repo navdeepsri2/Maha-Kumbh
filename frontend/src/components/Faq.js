@@ -12,7 +12,7 @@ const FAQ = () => {
   return (
     <div className="faq-background">
       <Helmet>
-                <title>Prayatak - Faq </title>
+                <title>Maha Kumbh - Faq </title>
             </Helmet>
       <div className="faq-container">
         <h2>Frequently Asked Questions</h2>

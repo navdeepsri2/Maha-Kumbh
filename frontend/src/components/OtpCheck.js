@@ -51,7 +51,7 @@ function OtpCheck() {
     return (
         <div>
           <Helmet>
-                <title>Prayatak - Otp </title>
+                <title>Maha Kumbh - Otp </title>
             </Helmet>
             <section className="login-center">
                 <div className="login-container">
