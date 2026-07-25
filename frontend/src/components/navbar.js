@@ -30,8 +30,14 @@ export default function Navbar() {
         <Link className='logoimg' to="/">
           <img src={logo} alt="Logo" />
         </Link>
-        <Link className='logotxt' to="/">
-          <img src={logoText} alt="Logo" />
+        <Link className='logotxt' to="/" style={{ textDecoration: 'none' }}>
+          <span style={{ 
+            fontFamily: "'Great Vibes', cursive", 
+            fontSize: '38px', 
+            color: '#fff', 
+            marginLeft: '10px',
+            textTransform: 'lowercase'
+          }}>maha kumbh</span>
         </Link>
       </div>
 
