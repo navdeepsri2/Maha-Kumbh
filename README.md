@@ -1,159 +1,165 @@
-# Kumbh Mela Tourism Website
+# 🕉️ Maha Kumbh
 
-A comprehensive tourism platform for Kumbh Mela, featuring user authentication, blog posts, lost and found services, attraction details, and more.
+<p align="center">
+  <b>A comprehensive tourism & community web platform for the Kumbh Mela pilgrimage</b>
+</p>
 
-## Table of Contents
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://frontend-ashy-sigma-55.vercel.app)
+![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 
-- [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Installation & Setup](#installation--setup)
-- [Environment Variables](#environment-variables)
-- [Available Scripts](#available-scripts)
+---
 
-## Overview
+## 📖 About
 
-The Kumbh Mela Tourism Website is a full-stack web application designed to provide information and services for tourists planning to visit the Kumbh Mela festival. It includes features for users to browse tourist attractions, read and share blog posts, report and claim lost items, contact administrators, and more.
+**Maha Kumbh** is a full-stack tourism web application designed to guide pilgrims and tourists attending the Kumbh Mela — the world's largest religious gathering. The platform provides everything a visitor needs: travel guides, major attraction listings, a community blog, a lost & found system, and an AI-powered chatbot assistant.
 
-## Features
+---
 
-### User-Facing Features
+## ✨ Features
 
-- **User Authentication**
-  - Sign up/login with email
-  - Password reset via email with secure tokens
-  - User profile management
-  - OTP verification
+| Feature | Description |
+|---|---|
+| 🏛️ **Major Attractions** | Explore key religious and cultural sites around Prayagraj |
+| 📝 **Community Blogs** | Read and write travel experiences and tips |
+| 🔍 **Lost & Found** | Report and search for lost items or people at the Mela |
+| 🤖 **AI Chatbot** | Gemini-powered assistant for instant travel guidance |
+| 👤 **User Profiles** | Sign up, manage your profile, and view your activity |
+| 🔐 **Clerk Authentication** | Secure and modern authentication with Clerk |
+| 📸 **Image Uploads** | Upload images via Cloudinary integration |
+| 📬 **Contact & FAQ** | Get help and find answers to common questions |
+| 🛡️ **Admin Panel** | Manage users, blogs, and claimed lost items |
 
-- **Blog System**
-  - View blogs about Kumbh Mela
-  - Create, edit, and delete blogs (authenticated users)
-  - Comment on blogs
-  - Like blogs and comments
+---
 
-- **Lost and Found Services**
-  - Report lost items
-  - Report found items
-  - Claim items with verification process
-  - Search functionality for lost/found items
+## 🏗️ Tech Stack
 
-- **Tourist Information**
-  - Tourist attractions
-  - Guides and travel tips
-  - FAQs about Kumbh Mela
-  - Information about Prayagraj
+### Frontend
+- **React 18** — UI framework
+- **React Router v6** — Client-side routing
+- **Clerk React** — Authentication
+- **React Helmet Async** — SEO meta tags
+- **React Hot Toast** — Notifications
+- **React Quill** — Rich text blog editor
 
-- **Other Features**
-  - Contact form
-  - User feedback
-  - Mobile-responsive design
-  - Image uploads for blogs and lost/found items
+### Backend
+- **Node.js + Express** — REST API server
+- **MongoDB + Mongoose** — Database
+- **Clerk SDK** — Server-side authentication
+- **Cloudinary** — Image storage and management
+- **Nodemailer** — Email service (OTP, contact)
+- **Google Gemini AI** — AI chatbot integration
+- **Express Session + MongoStore** — Session management
 
-### Admin Features
+---
 
-- Admin dashboard
-- Manage users
-- Moderate blogs and comments
-- Process lost and found claims
-- Review user feedback
-
-## Tech Stack
-
-- **React**: UI library for building the user interface
-- **Node.js**: JavaScript runtime environment
-- **Express**: Web application framework
-- **MongoDB**: NoSQL database
-
-## Project Structure
-
-The project is organized into two main directories:
-
-### Frontend Structure
+## 📁 Project Structure
 
 ```
-frontend/
-├── public/           # Static files
-├── src/              # Source files
-│   ├── components/   # React components
-│   ├── context/      # Context API files
-│   ├── css/          # CSS stylesheets
-│   ├── images/       # Image assets
-│   ├── blogData/     # Static blog data
-│   ├── App.js        # Main app component
-│   └── index.js      # Entry point
+Maha-Kumbh/
+├── frontend/               # React app
+│   ├── public/
+│   │   └── index.html
+│   ├── src/
+│   │   ├── components/     # All UI components
+│   │   ├── context/        # React context (state management)
+│   │   ├── bolgData/       # Static data (blogs, attractions, FAQs)
+│   │   ├── css/            # Stylesheets
+│   │   └── App.js          # Main app with routing
+│   └── package.json
+│
+├── backend/                # Express API server
+│   ├── routes/             # API routes (user, blog, lf, chatbot)
+│   ├── models/             # Mongoose models
+│   ├── middleware.js        # Custom middleware
+│   ├── index.js            # Server entry point
+│   └── package.json
+│
+└── README.md
 ```
 
-### Backend Structure
+---
 
-```
-backend/
-├── models/           # Database models
-├── routes/           # API routes
-├── middleware/       # Custom middleware
-├── public/           # Static assets
-├── index.js          # Server entry point
-```
+## 🚀 Getting Started (Local Development)
 
-## Installation & Setup
+### Prerequisites
+- Node.js v18+
+- MongoDB (local or Atlas)
+- Clerk account
+- Cloudinary account
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/rachitkansal-dev/kumbh-react.git
-   cd kumbh-react
-   ```
-
-2. Install dependencies for the entire project:
-   ```bash
-   npm run install-all
-   ```
-
-   This will install dependencies for the root project, frontend, and backend.
-
-3. Configure environment variables (see [Environment Variables](#environment-variables) section)
-
-4. Start the development server:
-   ```bash
-   npm start
-   ```
-
-## Environment Variables
-
-Create a `.env` file in the backend directory with the following variables:
-
-```
-PORT=8080
-MONGODB_URI=mongodb://localhost:27017/kumbh_mela
-SESSION_SECRET=your_secret_key
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-CLOUDINARY_KEY=your_api_key
-CLOUDINARY_SECRET=your_api_secret
-EMAIL=your_email@gmail.com
-EMAIL_PASSWORD=your_email_app_password
+### 1. Clone the repository
+```bash
+git clone https://github.com/navdeepsri2/Maha-Kumbh.git
+cd Maha-Kumbh
 ```
 
-## Available Scripts
+### 2. Set up the Backend
+```bash
+cd backend
+cp .env.example .env
+# Fill in all values in .env
+npm install
+npm start
+```
 
-In the project directory, you can run:
+### 3. Set up the Frontend
+```bash
+cd frontend
+npm install
+npm start
+```
 
-### `npm run install-all`
+The app will run at **http://localhost:3000**
 
-Installs dependencies for the root project, frontend, and backend.
+---
 
-### `npm start`
+## 🔑 Environment Variables
 
-Runs both the frontend and backend concurrently.
-- Frontend will be available at [http://localhost:3000](http://localhost:3000)
-- Backend will be available at [http://localhost:8080](http://localhost:8080)
+### Backend (`backend/.env`)
 
-### `npm run start-frontend`
+| Variable | Description |
+|---|---|
+| `MONGODB_URI` | MongoDB Atlas connection string |
+| `PORT` | Server port (default: 8080) |
+| `SESSION_SECRET` | Express session secret key |
+| `STORE_SECRET` | MongoStore encryption key |
+| `CLERK_SECRET_KEY` | Clerk backend secret key |
+| `CLERK_PUBLISHABLE_KEY` | Clerk publishable key |
+| `CLOUDINARY_CLOUD_NAME` | Cloudinary cloud name |
+| `CLOUDINARY_KEY` | Cloudinary API key |
+| `CLOUDINARY_SECRET` | Cloudinary API secret |
+| `GEMINI_API_KEY` | Google Gemini AI API key |
+| `TRANSPORTER_EMAIL` | Gmail address for email sending |
+| `TRANSPORTER_KEY` | Gmail app password |
 
-Runs only the frontend application in development mode.
+### Frontend (`frontend/.env`)
 
-### `npm run start-backend `
+| Variable | Description |
+|---|---|
+| `REACT_APP_CLERK_PUBLISHABLE_KEY` | Clerk publishable key |
+| `REACT_APP_API_URI` | Backend server URL |
 
-Runs only the backend server.
+---
 
-### `npm run build`
+## 🌐 Deployment
 
-Builds the frontend application for production to the `frontend/build` folder.
+| Service | Platform |
+|---|---|
+| **Frontend** | [Vercel](https://vercel.com) |
+| **Backend** | [Render](https://render.com) |
+| **Database** | [MongoDB Atlas](https://www.mongodb.com/atlas) |
+| **Images** | [Cloudinary](https://cloudinary.com) |
+
+**Live URL:** [https://frontend-ashy-sigma-55.vercel.app](https://frontend-ashy-sigma-55.vercel.app)
+
+---
+
+## 📄 License
+
+This project is licensed under the **ISC License**.
+
+---
+
+<p align="center">Made with ❤️ for the pilgrims of Maha Kumbh Mela</p>
